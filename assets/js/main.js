@@ -22,19 +22,26 @@ function clearResult() {
 // funcao que calcula o imc feita separadamente para melhor organizaçao do codigo
 function imc(peso, altura) {
   const calc = peso / altura ** 2;
-
+  const nivelImc = [
+    "Abaixo do peso",
+    "Peso normal",
+    "Sobrepeso",
+    "Obesidade de grau 1",
+    "Obesidade de grau 2",
+    "Obesidade de grau 3",
+  ];
   let mensagem =
     calc < 18.5
-      ? "Abaixo do peso"
+      ? nivelImc[0]
       : calc <= 24.9
-      ? "Peso normal"
+      ? nivelImc[1]
       : calc <= 29.9
-      ? "Sobrepeso"
+      ? nivelImc[2]
       : calc <= 34.9
-      ? "Obesidade de grau 1"
+      ? nivelImc[3]
       : calc <= 39.9
-      ? "Obesidade de grau 2"
-      : "Obesidade de grau 3";
+      ? nivelImc[4]
+      : nivelImc[5];
 
   renderResult({ mensagem, imc: calc });
 }
