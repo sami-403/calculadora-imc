@@ -27,3 +27,5 @@ Este é um **projeto pessoal** desenvolvido para praticar HTML, CSS e JavaScript
 - JavaScript (ES6+)
 
 **Observação:** Projeto criado para fins de prática pessoal, **livre para modifições**.
+
+
